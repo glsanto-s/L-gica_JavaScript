@@ -1,0 +1,25 @@
+#dev{
+    color: blueviolet;
+}
+.fundoCor{
+    background: rgba(137, 43, 226, 0.315); 
+    border-radius: 10px;
+}
+
+/* Listas */
+.lista1,.lista2,.lista3{
+    display: none;
+}
+
+/* Lista 01 */
+.ex_01_l1,.ex_02_l1,.ex_03_l1,.ex_04_l1,.ex_05_l1,.ex_06_l1,.ex_07_l1,.ex_08_l1,.ex_09_l1,.ex_10_l1,.ex_11_l1,.ex_12_l1{
+    display: none;
+}
+/* Lista 02 */
+.ex_01_l2,.ex_02_l2,.ex_03_l2,.ex_04_l2,.ex_05_l2,.ex_06_l2,.ex_07_l2,.ex_08_l2,.ex_09_l2,.ex_10_l2{
+    display: none;
+}
+/* Lista 03 */
+.ex_01_l3,.ex_02_l3,.ex_03_l3,.ex_04_l3,.ex_05_l3,.ex_06_l3,.ex_07_l3,.ex_08_l3,.ex_09_l3,.ex_10_l3{
+    display: none;
+}
