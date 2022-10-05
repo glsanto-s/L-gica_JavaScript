@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios em JavaScript</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- bootstrap icones -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- css próprio -->
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                < <span id="dev">Gyo Lima
+                    </span> >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <button class="btn btn-outline-white text-dark" id="btn_lista01">Lista 1</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-white" id="btn_lista02">Lista 2</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-white" id="btn_lista03">Lista 3</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-white" id="btn_listaF">FacCat</button>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-white" id="btn_listaM">Manzano</button>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <section class="BemVindo">
+        <div class="container mt-2">
+            <p class="text-center fw-bolder">Olá! Selecione um lista da barra de navegação para visualizar.</p>
+        </div>
+    </section>
+
+    <!-- Lista 01 -->
+    <section class="lista1 mt-4">
+        <div class="container fundoCor">
+            <h6 class="pt-2">< Lista 01 ></h6>
+            <div class="row">
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_01_l1');">Exercício 01</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_02_l1');">Exercício 02</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_03_l1');">Exercício 03</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_04_l1');">Exercício 04</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_05_l1');">Exercício 05</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_06_l1');">Exercício 06</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_07_l1');">Exercício 07</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_08_l1');">Exercício 08</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_09_l1');">Exercício 09</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_10_l1');">Exercício 10</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_11_l1');">Exercício 11</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_12_l1');">Exercício 12</button>
+                </div>
+            </div>
+        </div>
+
+        <section class="ex_lista1 mt-4 mb-4">
+            <div class="container fundoCor">
+                <div class="ex_01_l1 p-2">
+                    <h6>Ex 01 - Número Sucessor</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex01_l1" class="form-control" placeholder="Digite um Número"
+                                aria-label="Digite um Número">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex01();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex01_l1_result"></h6>
+                </div>
+                <div class="ex_02_l1 p-2">
+                    <h6>Ex 02 - Número Antecessor</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex02_l1" class="form-control" placeholder="Digite um Número"
+                                aria-label="Digite um Número">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex02();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex02_l1_result"></h6>
+                </div>
+                <div class="ex_03_l1 p-2">
+                    <h6>Ex 03 - Soma de 2 Valores</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex03_n1_l1" class="form-control" placeholder="Digite um Número"
+                                aria-label="Digite um Número">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex03_n2_l1" class="form-control" placeholder="Digite outro Número"
+                                aria-label="Digite outro Número">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex03();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex03_l1_result"></h6>
+                </div>
+                <div class="ex_04_l1 p-2">
+                    <h6>Ex 04 - Subtração de 2 Valores</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex04_n1_l1" class="form-control" placeholder="Digite um Número"
+                                aria-label="Digite um Número">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex04_n2_l1" class="form-control" placeholder="Digite outro Número"
+                                aria-label="Digite outro Número">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex04();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex04_l1_result"></h6>
+                </div>
+                <div class="ex_05_l1 p-2">
+                    <h6>Ex 05 - Multiplicação de 2 Valores</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex05_n1_l1" class="form-control" placeholder="Digite um Número"
+                                aria-label="Digite um Número">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex05_n2_l1" class="form-control" placeholder="Digite outro Número"
+                                aria-label="Digite outro Número">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex05();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex05_l1_result"></h6>
+                </div>
+                <div class="ex_06_l1 p-2">
+                    <h6>Ex 06 - Divisão de 2 Valores</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex06_n1_l1" class="form-control" placeholder="Digite um Número"
+                                aria-label="Digite um Número">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex06_n2_l1" class="form-control" placeholder="Digite outro Número"
+                                aria-label="Digite outro Número">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex06();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex06_l1_result"></h6>
+                </div>
+                <div class="ex_07_l1 p-2">
+                    <h6>Ex 07 - Dimensões do Retângulo</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex07_n1_l1" class="form-control" placeholder="Digite a Base"
+                                aria-label="Digite a Base">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex07_n2_l1" class="form-control" placeholder="Digite a Altura"
+                                aria-label="Digite a Altura">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex07();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex07_l1_result"></h6>
+                </div>
+                <div class="ex_08_l1 p-2">
+                    <h6>Ex 08 - Dimensões do Triângulo</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex08_n1_l1" class="form-control" placeholder="Digite a Base"
+                                aria-label="Digite a Base">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex08_n2_l1" class="form-control" placeholder="Digite a Altura"
+                                aria-label="Digite a Altura">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex08();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex08_l1_result"></h6>
+                </div>
+                <div class="ex_09_l1 p-2">
+                    <h6>Ex 09 - Dimensões do Quadrado</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex09_n1_l1" class="form-control" placeholder="Digite um Lado"
+                                aria-label="Digite um Lado">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex09();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex09_l1_result"></h6>
+                </div>
+                <div class="ex_10_l1 p-2">
+                    <h6>Ex 10 - Dimensões do Losango</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex10_n1_l1" class="form-control"
+                                placeholder="Digite a diagonal maior" aria-label="Digite a diagonal maior">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex10_n2_l1" class="form-control"
+                                placeholder="Digite a diagonal menor" aria-label="Digite a diagonal menor">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex10();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex10_l1_result"></h6>
+                </div>
+                <div class="ex_11_l1 p-2">
+                    <h6>Ex 11 - Dimensões do Trapézio</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex11_n1_l1" class="form-control" placeholder="Digite a base maior"
+                                aria-label="Digite a base maior">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex11_n2_l1" class="form-control" placeholder="Digite a base menor"
+                                aria-label="Digite a base menor">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex11_n3_l1" class="form-control" placeholder="Digite a altura"
+                                aria-label="Digite a altura">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l1_ex11();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex11_l1_result"></h6>
+                </div>
+                <div class="ex_12_l1 p-2">
+                    <h6>Ex 12 - Dimensões do Círculo</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex12_n1_l1" class="form-control" placeholder="Digite o Raio"
+                                aria-label="Digite o Raio">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l1_ex12();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex12_l1_result"></h6>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Lista 02 -->
+    <section class="lista2 mt-4">
+        <div class="container fundoCor">
+            <h6 class="pt-2">< Lista 02 ></h6>
+            <div class="row">
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_01_l2');">Exercício 01</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_02_l2');">Exercício 02</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_03_l2');">Exercício 03</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_04_l2');">Exercício 04</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_05_l2');">Exercício 05</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_06_l2');">Exercício 06</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_07_l2');">Exercício 07</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_08_l2');">Exercício 08</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_09_l2');">Exercício 09</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_10_l2');">Exercício 10</button>
+                </div>
+            </div>
+        </div>
+        <section class="ex_lista2 mt-4 mb-4">
+            <div class="container fundoCor">
+                <div class="ex_01_l2 p-2">
+                    <h6>Ex 01 -Conversor Idade em Dias</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex01_n1_l2" class="form-control" placeholder="Quantos anos?"
+                                aria-label="Quantos anos?">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex01_n2_l2" class="form-control" placeholder="Quantos meses?"
+                                aria-label="Quantos meses?">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex01_n3_l2" class="form-control" placeholder="Quantos dias?"
+                                aria-label="Quantos dias?">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l2_ex01();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex01_l2_result"></h6>
+                </div>
+                <div class="ex_02_l2 p-2">
+                    <h6>Ex 02 - Total de Eleitores - Município</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex02_n1_l2" class="form-control" placeholder="Votos Válidos"
+                                aria-label="Votos Válidos">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex02_n2_l2" class="form-control" placeholder="Votos Brancos"
+                                aria-label="Votos Brancos">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex02_n3_l2" class="form-control" placeholder="Votos Nulos"
+                                aria-label="Votos Nulos">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l2_ex02();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex02_l2_result"></h6>
+                </div>
+                <div class="ex_03_l2 p-2">
+                    <h6>Ex 03 - Salário Mensal com Reajuste</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex03_n1_l2" class="form-control" placeholder="Valor Salário"
+                                aria-label="Valor Salário">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex03_n2_l2" class="form-control"
+                                placeholder="Valor porcentagem de reajuste" aria-label="Valor porcentagem de reajuste">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex03();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex03_l2_result"></h6>
+                </div>
+                <div class="ex_04_l2 p-2">
+                    <h6>Ex 04 - Custo do Automóvel</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex04_n1_l2" class="form-control"
+                                placeholder="Valor de fábrica do automóvel" aria-label="Valor de fábrica do automóvel">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex04();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex04_l2_result"></h6>
+                </div>
+                <div class="ex_05_l2 p-2">
+                    <h6>Ex 05 - Celsiu - Fahrenheit</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex05_n1_l2" class="form-control"
+                                placeholder="Temperatura em Celsius" aria-label="Temperatura em Celsius">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex05();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex05_l2_result"></h6>
+                </div>
+                <div class="ex_06_l2 p-2">
+                    <h6>Ex 06 - Fahrenheit - Celsius</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex06_n1_l2" class="form-control"
+                                placeholder="Temperatura em Fahrenheit" aria-label="Temperatura em Fahrenheit">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex06();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex06_l2_result"></h6>
+                </div>
+                <div class="ex_07_l2 p-2">
+                    <h6>Ex 07 - Volume da Lata de Óleo</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex07_n1_l2" class="form-control"
+                                placeholder="Digite o raio da Lata" aria-label="Digite o raio da Lata">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex07_n2_l2" class="form-control"
+                                placeholder="Digite a altura da Lata" aria-label="Digite a altura da Lata">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex07();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex07_l2_result"></h6>
+                </div>
+                <div class="ex_08_l2 p-2">
+                    <h6>Ex 08 - Consumo de Litros</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex08_n1_l2" class="form-control"
+                                placeholder="Duração da Viagem (horas)" aria-label="Duração da Viagem">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex08_n2_l2" class="form-control"
+                                placeholder="Velocidade Média em km/h" aria-label="Velocidade Média em km/h">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex08();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex08_l2_result"></h6>
+                </div>
+                <div class="ex_09_l2 p-2">
+                    <h6>Ex 09 - Prestação em Atraso</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex09_n1_l2" class="form-control" placeholder="Valor da prestação"
+                                aria-label="Valor da prestação">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex09_n2_l2" class="form-control" placeholder="Taxa de Juros"
+                                aria-label="Taxa de Juros">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex09_n3_l2" class="form-control" placeholder="Meses da Parcela"
+                                aria-label="Meses da Parcela">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l2_ex09();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex09_l2_result"></h6>
+                </div>
+                <div class="ex_10_l2 p-2">
+                    <h6>Ex 10 - Troca de Valores</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="text" id="ex10_n1_l2" class="form-control"
+                                placeholder="1º Valor (caracteres ou números)" aria-label="1º Valor">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" id="ex10_n2_l2" class="form-control"
+                                placeholder="2º Valor (caracteres ou números)" aria-label="2º Valor">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l2_ex10();">Trocar</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex10_l2_result"></h6>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- Lista 03 -->
+    <section class="lista3 mt-4">
+        <div class="container fundoCor">
+            <h6 class="pt-2">< Lista 03 ></h6>
+            <div class="row">
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_01_l3');">Exercício 01</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_02_l3');">Exercício 02</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_03_l3');">Exercício 03</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_04_l3');">Exercício 04</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_05_l3');">Exercício 05</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_06_l3');">Exercício 06</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_07_l3');">Exercício 07</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_08_l3');">Exercício 08</button>
+                </div>
+                <div class="col-md-2 pb-2">
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_09_l3');">Exercício 09</button>
+                    <button class="btn btn-light mt-2" onclick="exercicio('.ex_10_l3');">Exercício 10</button>
+                </div>
+            </div>
+        </div>
+        <section class="ex_lista3 mt-4 mb-4">
+            <div class="container fundoCor">
+                <div class="ex_01_l3 p-2">
+                    <h6>Ex 01 - Soma e Multiplacação de 4 Números</h6>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <input type="number" id="ex01_n1_l3" class="form-control" placeholder="Numero 1"
+                                aria-label="Numero 1">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex01_n2_l3" class="form-control" placeholder="Numero 2"
+                                aria-label="Numero 2">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex01_n3_l3" class="form-control" placeholder="Numero 3"
+                                aria-label="Numero 3">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex01_n4_l3" class="form-control" placeholder="Numero 3"
+                                aria-label="Numero 4">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-light" onclick="l3_ex01();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex01_l3_result"></h6>
+                </div>
+                <div class="ex_02_l3 p-2">
+                    <h6>Ex 02 - Volume de uma Caixa Retangular</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex02_n1_l3" class="form-control" placeholder="Comprimento"
+                                aria-label="Comprimento">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex02_n2_l3" class="form-control" placeholder="Largura"
+                                aria-label="Largura">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex02_n3_l3" class="form-control" placeholder="Altura"
+                                aria-label="Altura">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l3_ex02();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex02_l3_result"></h6>
+                </div>
+                <div class="ex_03_l3 p-2">
+                    <h6>Ex 03 - Quadrado da Diferença do 1º valor pelo 2º</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex03_n1_l3" class="form-control" placeholder="Primeiro Valor"
+                                aria-label="Primeiro Valor">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex03_n2_l3" class="form-control" placeholder="Segundo Valor"
+                                aria-label="Segundo Valor">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l3_ex03();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex03_l3_result"></h6>
+                </div>
+                <div class="ex_04_l3 p-2">
+                    <h6>Ex 04 - Conversor Real - Dólar</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex04_n1_l3" class="form-control" placeholder="Digite a cotção do Dólar"
+                                aria-label="Digite a cotação do Dólar">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex04_n2_l3" class="form-control" placeholder="Digite a quantidade em Real"
+                                aria-label="Digite a quantidade em Real">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l3_ex04();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex04_l3_result"></h6>
+                </div>
+                <div class="ex_05_l3 p-2">
+                    <h6>Ex 05 - Conversor Dólar - Real</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex05_n1_l3" class="form-control" placeholder="Digite a cotção do Dólar"
+                                aria-label="Digite a cotação do Dólar">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex05_n2_l3" class="form-control" placeholder="Digite a quantidade em Real"
+                                aria-label="Digite a quantidade em Dólar">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l3_ex05();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex05_l3_result"></h6>
+                </div>
+                <div class="ex_06_l3 p-2">
+                    <h6>Ex 06 - Soma do Quadrado de 3 valores</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex06_n1_l3" class="form-control" placeholder="Primeiro Valor"
+                                aria-label="Primeiro Valor">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex06_n2_l3" class="form-control" placeholder="Segundo Valor"
+                                aria-label="Segundo Valor">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex06_n3_l3" class="form-control" placeholder="Terceiro Valor"
+                                aria-label="Terceiro Valor">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l3_ex06();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex06_l3_result"></h6>
+                </div>
+                <div class="ex_07_l3 p-2">
+                    <h6>Ex 07 - Quadrado da Soma de 3 valores</h6>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <input type="number" id="ex07_n1_l3" class="form-control" placeholder="Primeiro Valor"
+                                aria-label="Primeiro Valor">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex07_n2_l3" class="form-control" placeholder="Segundo Valor"
+                                aria-label="Segundo Valor">
+                        </div>
+                        <div class="col-md-3">
+                            <input type="number" id="ex07_n3_l3" class="form-control" placeholder="Terceito Valor"
+                                aria-label="Terceiro Valor">
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-light" onclick="l3_ex07();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex07_l3_result"></h6>
+                </div>
+                <div class="ex_08_l3 p-2">
+                    <h6>Ex 08 - Produto do 1º + 3º valor e Soma do 2º + 4º valor</h6>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <input type="number" id="ex08_n1_l3" class="form-control" placeholder="Primeiro Valor"
+                                aria-label="Primeiro Valor">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex08_n2_l3" class="form-control" placeholder="Segundo Valor"
+                                aria-label="Segundo Valor">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex08_n3_l3" class="form-control" placeholder="Terceiro Valor"
+                                aria-label="Terceiro Valor">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex08_n4_l3" class="form-control" placeholder="Quarto Valor"
+                                aria-label="Quarto Valor">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-light" onclick="l3_ex08();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex08_l3_result"></h6>
+                </div>
+                <div class="ex_09_l3 p-2">
+                    <h6>Ex 09 - Reajuste de Salário</h6>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <input type="number" id="ex09_n1_l3" class="form-control" placeholder="Salário Mensal"
+                                aria-label="Salário Mensal">
+                        </div>
+                        <div class="col-md-4">
+                            <input type="number" id="ex09_n2_l3" class="form-control" placeholder="Percentual de Reajuste"
+                                aria-label="Percentual de Reajuste">
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-light" onclick="l3_ex09();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex09_l3_result"></h6>
+                </div>
+                <div class="ex_10_l3 p-2">
+                    <h6>Ex 10 - Eleição Sindical</h6>
+                    <div class="row">
+                        <div class="col-md-2">
+                            <input type="number" id="ex10_n1_l3" class="form-control" placeholder="Candidato A"
+                                aria-label="Candidato A">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex10_n2_l3" class="form-control" placeholder="Candidato B"
+                                aria-label="Candidato B">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex10_n3_l3" class="form-control" placeholder="Candidato C"
+                                aria-label="Candidato C">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex10_n4_l3" class="form-control" placeholder="Votos Brancos"
+                                aria-label="Votos Brancos">
+                        </div>
+                        <div class="col-md-2">
+                            <input type="number" id="ex10_n5_l3" class="form-control" placeholder="Votos Nulos"
+                                aria-label="Votos Nulos">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-light" onclick="l3_ex10();">Calcular</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <h6 id="ex10_l3_result"></h6>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js">
+    </script>
+
+    <!-- Script Próprio -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
