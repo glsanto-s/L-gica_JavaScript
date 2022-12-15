@@ -344,7 +344,7 @@ function l3_ex08() {
     var N3 = parseFloat(document.getElementById("ex08_n3_l3").value);
     var N4 = parseFloat(document.getElementById("ex08_n4_l3").value);
 
-    var produto = N1 + N3;
+    var produto = N1 * N3;
     var soma = N2 + N4;
 
     document.getElementById("ex08_l3_result").innerHTML = "Resultado do 1º valor com o 3º valor: " + produto + "<br> Resultado do 2º valor com o 4º valor: " + soma;
